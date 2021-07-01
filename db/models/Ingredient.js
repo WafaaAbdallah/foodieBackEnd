@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     slug: {
       type: DataTypes.STRING,
-      unique: true, //its optional
+      unique: true, 
     },
    
     image: {
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   Ingredient.associate = (models) => {
     models.Category.hasMany(Ingredient, {
       foreignKey: "categoryId",
-      as: "products",
+      as: "ingredients",
       alloNull: false,
     });
 

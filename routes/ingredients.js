@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const upload = require("../middleware/multer");
 
 const {
     ingredientFetch,
@@ -22,3 +23,4 @@ const {
   router.get("/", ingredientList);
 
   module.exports = router;
+  
